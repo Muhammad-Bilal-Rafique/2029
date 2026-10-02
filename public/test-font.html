@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cinzel:wght@400;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Create a hybrid serif font where letters are Cormorant Garamond, but digits 0-9 are Playfair Display! */
+    @font-face {
+      font-family: 'LuxuryWeddingSerif';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Playfair Display'), local('PlayfairDisplay-Regular');
+      unicode-range: U+0030-0039, U+002E, U+002C, U+003A, U+00B7; /* 0-9, ., ,, :, middle dot */
+    }
+    @font-face {
+      font-family: 'LuxuryWeddingSerif';
+      font-style: normal;
+      font-weight: 500;
+      src: local('Playfair Display Medium'), local('PlayfairDisplay-Medium'), local('Playfair Display');
+      unicode-range: U+0030-0039, U+002E, U+002C, U+003A, U+00B7;
+    }
+    @font-face {
+      font-family: 'LuxuryWeddingSerif';
+      font-style: normal;
+      font-weight: 600;
+      src: local('Playfair Display SemiBold'), local('PlayfairDisplay-SemiBold'), local('Playfair Display');
+      unicode-range: U+0030-0039, U+002E, U+002C, U+003A, U+00B7;
+    }
+    @font-face {
+      font-family: 'LuxuryWeddingSerif';
+      font-style: normal;
+      font-weight: 700;
+      src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'), local('Playfair Display');
+      unicode-range: U+0030-0039, U+002E, U+002C, U+003A, U+00B7;
+    }
+
+    body {
+      background: #F8F3EA;
+      color: #581D35;
+      padding: 40px;
+      font-size: 26px;
+    }
+    .box {
+      margin-bottom: 20px;
+      padding: 16px;
+      background: white;
+      border-radius: 8px;
+      border: 1px solid #C6A46A;
+    }
+    .label {
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px;
+      color: #9C7E48;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+    .date-card {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 6px;
+      background: #FAF7F2;
+      border: 1px solid #E4D0A5;
+      margin-top: 8px;
+    }
+    .hybrid-font {
+      font-family: 'LuxuryWeddingSerif', 'Cormorant Garamond', Georgia, serif;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    .cormorant-lining {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-variant-numeric: lining-nums tabular-nums;
+      font-feature-settings: 'lnum' 1, 'tnum' 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="label">1. Original Awkward Numbers (Cormorant Garamond Default):</div>
+    <div style="font-family: 'Cormorant Garamond', Georgia, serif;">
+      11 September 2029 &bull; 12 &middot; 09 &middot; 2029 &bull; 0 1 2 3 4 5 6 7 8 9
+      <div class="date-card">
+        <span style="font-size: 11px; text-transform: uppercase; display: block; color: #888; font-family: 'Manrope';">Date &amp; Day</span>
+        <span style="font-weight: 500;">11 September 2029</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="label">2. Cormorant Garamond with Lining Numbers (Full Height):</div>
+    <div class="cormorant-lining">
+      11 September 2029 &bull; 12 &middot; 09 &middot; 2029 &bull; 0 1 2 3 4 5 6 7 8 9
+      <div class="date-card">
+        <span style="font-size: 11px; text-transform: uppercase; display: block; color: #888; font-family: 'Manrope';">Date &amp; Day</span>
+        <span style="font-weight: 500;">11 September 2029</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="label">3. Playfair Display Numbers + Cormorant Garamond Text (via unicode-range or Playfair):</div>
+    <div style="font-family: 'Playfair Display', Georgia, serif;">
+      11 September 2029 &bull; 12 &middot; 09 &middot; 2029 &bull; 0 1 2 3 4 5 6 7 8 9
+      <div class="date-card">
+        <span style="font-size: 11px; text-transform: uppercase; display: block; color: #888; font-family: 'Manrope';">Date &amp; Day</span>
+        <span style="font-weight: 500;">11 September 2029</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
