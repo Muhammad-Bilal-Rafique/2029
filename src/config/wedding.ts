@@ -35,7 +35,7 @@ export interface WeddingConfig {
       fullName: string;
       firstName: string;
       hometown: string;
-      photo: string;
+      photo: string | null;
       initial: string;
     };
     displayNames: string;
@@ -108,7 +108,7 @@ export const weddingConfig: WeddingConfig = {
       fullName: "Maria Jakhro",
       firstName: "Maria",
       hometown: "Karachi, Pakistan",
-      photo: "/images/maria.jpg",
+      photo: null,
       initial: "M",
     },
     displayNames: "Bilal & Maria",
