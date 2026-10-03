@@ -79,7 +79,7 @@ export const HeroInvitation: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="inline-flex flex-wrap items-center justify-center gap-4 sm:gap-8 px-6 py-2.5 rounded-full border border-gold/40 bg-ivory/80 backdrop-blur-sm shadow-sm mb-12"
         >
-          <div className="flex items-center space-x-2 text-burgundy font-serif text-base sm:text-lg tracking-widest font-normal">
+          <div className="flex items-center space-x-2 text-burgundy font-serif wedding-date text-base sm:text-lg tracking-widest font-normal">
             <Calendar className="w-4 h-4 text-gold-dark" />
             <span>{invitation.primaryDate}</span>
           </div>

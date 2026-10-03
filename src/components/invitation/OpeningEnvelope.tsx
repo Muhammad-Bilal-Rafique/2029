@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FloralCorner } from '@/components/ui/FloralDecoration';
 import { weddingConfig } from '@/config/wedding';
 import { Sparkles, ArrowDown } from 'lucide-react';
+import { playGlobalAudio } from '@/hooks/useAudio';
 
 interface OpeningEnvelopeProps {
   onOpened: () => void;
@@ -18,6 +19,7 @@ export const OpeningEnvelope: React.FC<OpeningEnvelopeProps> = ({ onOpened, isOp
 
   const handleOpen = () => {
     if (animationStep !== 'closed') return;
+    playGlobalAudio();
     setAnimationStep('seal-breaking');
 
     // Sequence the opening animations smoothly
@@ -36,6 +38,7 @@ export const OpeningEnvelope: React.FC<OpeningEnvelopeProps> = ({ onOpened, isOp
   };
 
   const handleSkip = () => {
+    playGlobalAudio();
     setAnimationStep('completed');
     onOpened();
   };
@@ -118,7 +121,7 @@ export const OpeningEnvelope: React.FC<OpeningEnvelopeProps> = ({ onOpened, isOp
                   <div className="h-[1px] w-12 bg-gold/50 mx-auto" />
                 </div>
 
-                <div className="text-[10px] tracking-widest text-plum/70 uppercase">
+                <div className="text-[11px] sm:text-xs tracking-widest text-burgundy/80 uppercase font-serif wedding-date font-medium">
                   {weddingConfig.invitation.primaryDate} · {weddingConfig.couple.bride.hometown.split(',')[0]}
                 </div>
               </div>

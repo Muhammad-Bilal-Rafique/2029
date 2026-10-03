@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Calendar, MapPin, Mail, Send, Heart, Lock } from 'lucide-react';
+import { X, Calendar, MapPin, Mail, Heart, Lock } from 'lucide-react';
 import { weddingConfig } from '@/config/wedding';
 
 interface MobileNavigationProps {
@@ -23,7 +23,6 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
     { label: 'Celebrations', href: '#celebrations', icon: <Calendar className="w-4 h-4" /> },
     { label: 'Details', href: '#details', icon: <MapPin className="w-4 h-4" /> },
     { label: 'A Note From Us', href: '#note', icon: <Mail className="w-4 h-4" /> },
-    { label: 'RSVP', href: '#rsvp', icon: <Send className="w-4 h-4" /> },
   ];
 
   return (

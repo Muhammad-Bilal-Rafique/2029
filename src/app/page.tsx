@@ -11,9 +11,9 @@ import { WeddingEvents } from '@/components/invitation/WeddingEvents';
 import { Countdown } from '@/components/invitation/Countdown';
 import { WeddingDetails } from '@/components/invitation/WeddingDetails';
 import { PersonalLetter } from '@/components/invitation/PersonalLetter';
-import { RSVPSection } from '@/components/invitation/RSVPSection';
 import { ClosingSection } from '@/components/invitation/ClosingSection';
 import { MusicPlayer } from '@/components/invitation/MusicPlayer';
+import { playGlobalAudio } from '@/hooks/useAudio';
 
 export default function WeddingInvitationPage() {
   const { security } = weddingConfig;
@@ -48,6 +48,7 @@ export default function WeddingInvitationPage() {
 
   const handleUnlock = () => {
     setIsAuthenticated(true);
+    playGlobalAudio();
   };
 
   const handleLock = () => {
@@ -111,10 +112,7 @@ export default function WeddingInvitationPage() {
         {/* SECTION 7: A PERSONAL MESSAGE */}
         <PersonalLetter />
 
-        {/* SECTION 8: RSVP */}
-        <RSVPSection />
-
-        {/* SECTION 9: MUSIC & CLOSING EXPERIENCE */}
+        {/* SECTION 8: MUSIC & CLOSING EXPERIENCE */}
         <ClosingSection onReopenEnvelope={() => setIsEnvelopeOpened(false)} />
       </main>
 

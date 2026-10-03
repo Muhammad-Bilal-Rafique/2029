@@ -77,7 +77,7 @@ export const EventCard: React.FC<EventCardProps> = ({ event, index }) => {
         {/* Date and Day of Week */}
         <div className="flex flex-wrap items-baseline gap-2 mb-4">
           <span
-            className={`font-serif text-lg sm:text-xl font-medium ${
+            className={`font-serif wedding-date text-lg sm:text-xl font-medium ${
               isBaraat ? 'text-ivory' : 'text-plum'
             }`}
           >

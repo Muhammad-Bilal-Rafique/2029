@@ -50,6 +50,15 @@ body {
 /* Luxury Editorial & Metallic Styles */
 .font-serif {
   font-family: var(--font-cormorant), Georgia, serif;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: 'lnum' 1, 'tnum' 1;
+}
+
+.wedding-date,
+.wedding-numeral {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: 'lnum' 1, 'tnum' 1;
 }
 
 .font-sans {

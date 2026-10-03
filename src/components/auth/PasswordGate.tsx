@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { weddingConfig } from '@/config/wedding';
 import { FloralCorner } from '@/components/ui/FloralDecoration';
 import { Lock, Unlock, Eye, EyeOff, AlertCircle, Sparkles } from 'lucide-react';
+import { playGlobalAudio } from '@/hooks/useAudio';
 
 interface PasswordGateProps {
   onUnlock: () => void;
@@ -34,6 +35,9 @@ export const PasswordGate: React.FC<PasswordGateProps> = ({ onUnlock }) => {
     }
 
     if (entered === security.password) {
+      // Trigger background music automatically on unlock
+      playGlobalAudio();
+
       // Correct password
       if (typeof window !== 'undefined') {
         try {

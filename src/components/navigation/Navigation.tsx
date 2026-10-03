@@ -19,7 +19,7 @@ export const Navigation: React.FC<NavigationProps> = ({ onLock }) => {
       setIsScrolled(window.scrollY > 50);
 
       // Track active section
-      const sectionIds = ['hero', 'celebrations', 'details', 'note', 'rsvp'];
+      const sectionIds = ['hero', 'celebrations', 'details', 'note'];
       for (const id of sectionIds) {
         const el = document.getElementById(id);
         if (el) {
@@ -41,7 +41,6 @@ export const Navigation: React.FC<NavigationProps> = ({ onLock }) => {
     { label: 'Celebrations', href: '#celebrations' },
     { label: 'Details', href: '#details' },
     { label: 'A Note From Us', href: '#note' },
-    { label: 'RSVP', href: '#rsvp' },
   ];
 
   return (

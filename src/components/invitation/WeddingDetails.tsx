@@ -79,7 +79,7 @@ export const WeddingDetails: React.FC = () => {
                         <span className="block text-[10px] uppercase tracking-wider text-plum/50 font-medium">
                           Date &amp; Day
                         </span>
-                        <span className="font-serif text-base text-burgundy font-medium">
+                        <span className="font-serif wedding-date text-base text-burgundy font-medium">
                           {event.displayDate}
                         </span>
                         <span className="block text-xs text-plum/70">

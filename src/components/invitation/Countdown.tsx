@@ -96,7 +96,7 @@ export const Countdown: React.FC = () => {
                 <div className="absolute bottom-1.5 right-1.5 w-2 h-2 border-b border-r border-gold/50" />
 
                 {/* Big Serif Numerals */}
-                <span className="font-serif text-4xl sm:text-5xl md:text-6xl font-light text-gold-shimmer tracking-tight">
+                <span className="font-serif wedding-numeral wedding-date text-4xl sm:text-5xl md:text-6xl font-light text-gold-shimmer tracking-tight">
                   {isMounted ? String(unit.value).padStart(2, '0') : '00'}
                 </span>
 

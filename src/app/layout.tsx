@@ -78,7 +78,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${manrope.variable} ${alexBrush.variable} scroll-smooth`}
+      className={`${cormorant.variable} ${playfair.variable} ${manrope.variable} ${alexBrush.variable} scroll-smooth`}
     >
       <body className="min-h-screen bg-ivory text-plum selection:bg-rose/30 selection:text-burgundy flex flex-col font-sans">
         {children}

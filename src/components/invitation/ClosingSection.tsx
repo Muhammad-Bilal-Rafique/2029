@@ -93,8 +93,14 @@ export const ClosingSection: React.FC<ClosingSectionProps> = ({ onReopenEnvelope
         </div>
 
         {/* Footer Credit & Copyright */}
-        <div className="pt-8 text-[11px] text-champagne/40 tracking-widest uppercase font-light">
-          {couple.displayNames} · 12 September 2029 · Karachi, Pakistan
+        <div className="pt-8 text-xs text-champagne/60 tracking-widest uppercase font-light flex items-center justify-center flex-wrap gap-2">
+          <span>{couple.displayNames}</span>
+          <span className="opacity-40">·</span>
+          <span className="font-serif wedding-date tracking-wider text-gold-light/90 font-medium">
+            {weddingConfig.invitation.primaryDateFormatted}
+          </span>
+          <span className="opacity-40">·</span>
+          <span>{weddingConfig.invitation.primaryLocation}</span>
         </div>
       </div>
     </footer>
