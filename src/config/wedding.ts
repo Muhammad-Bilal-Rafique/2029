@@ -28,7 +28,7 @@ export interface WeddingConfig {
       fullName: string;
       firstName: string;
       hometown: string;
-      photo: string;
+      photo: string | null;
       initial: string;
     };
     bride: {
@@ -101,7 +101,7 @@ export const weddingConfig: WeddingConfig = {
       fullName: "Muhammad Bilal Rafique",
       firstName: "Bilal",
       hometown: "Lahore, Pakistan",
-      photo: "/images/bilal.jpg",
+      photo: null,
       initial: "B",
     },
     bride: {
